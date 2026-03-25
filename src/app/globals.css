@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-white text-[#000000e6] antialiased;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white border border-[#e0e0e0] rounded-lg p-6 transition-all duration-300;
+  }
+
+  .card-hover:hover {
+    @apply shadow-lg -translate-y-0.5 border-[#057642]/30;
+  }
+
+  .btn-primary {
+    @apply bg-[#057642] hover:bg-[#046237] text-white font-semibold py-2 px-6 rounded-full transition-all duration-200 active:scale-[0.98];
+  }
+
+  .btn-secondary {
+    @apply bg-white hover:bg-gray-50 text-[#057642] font-semibold py-2 px-6 rounded-full border border-[#057642] transition-all duration-200 active:scale-[0.98];
+  }
+
+  .btn-ghost {
+    @apply text-gray-500 hover:text-gray-700 hover:bg-gray-100 font-semibold py-2 px-4 rounded-lg transition-all duration-200;
+  }
+
+  .input-field {
+    @apply w-full bg-white border border-gray-400 rounded-lg px-4 py-2 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-[#057642] focus:border-[#057642] transition-all duration-200;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold;
+  }
+
+  .badge-blue {
+    @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-blue-100 text-blue-700;
+  }
+
+  .badge-green {
+    @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-green-100 text-green-700;
+  }
+
+  .badge-purple {
+    @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-purple-100 text-purple-700;
+  }
+
+  .badge-orange {
+    @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-orange-100 text-orange-700;
+  }
+
+  .gradient-text {
+    @apply text-[#057642] font-bold;
+  }
+
+  .stat-card {
+    @apply bg-white border border-[#e0e0e0] rounded-lg flex flex-col items-center justify-center text-center py-6 transition-all duration-300;
+  }
+
+  .progress-bar {
+    @apply h-2 bg-gray-200 rounded-full overflow-hidden;
+  }
+
+  .progress-fill {
+    @apply h-full bg-[#057642] rounded-full transition-all duration-500;
+  }
+
+  .page-container {
+    @apply min-h-screen bg-[#f3f2ef] pt-16 pb-8 px-4 sm:px-6;
+  }
+
+  .page-content {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .section-title {
+    @apply text-xl font-semibold text-gray-900 mb-1;
+  }
+
+  .section-subtitle {
+    @apply text-sm text-gray-500 mb-6;
+  }
+}
+
+/* LinkedIn Scrollbar Style */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c7c7c7;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
